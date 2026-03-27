@@ -73,7 +73,7 @@ cp -r coco-agent-skills/coco-intel-briefing .agents/skills/
 
 ## About COCO
 
-COCO builds AI-powered tools for humans who build and create. Products include interactive dashboards, API services, prompt packs, and agent skills.
+COCÓ builds AI-powered tools for humans who build and create. Products include interactive dashboards, API services, prompt packs, and agent skills.
 
 - Website: [goodstories.world](https://goodstories.world)
 - Products: [goodstories.gumroad.com](https://goodstories.gumroad.com)
