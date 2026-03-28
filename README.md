@@ -8,10 +8,10 @@
 
 ```bash
 # Install all skills (any agent that supports npx skills)
-npx skills add virnalisivelez/coco-agent-skills
+npx skills add goodstoriesworld/coco-agent-skills
 
 # Or clone directly
-git clone https://github.com/virnalisivelez/coco-agent-skills.git .agents/skills/coco
+git clone https://github.com/goodstoriesworld/coco-agent-skills.git .agents/skills/coco
 ```
 
 ## COCO Originals
@@ -65,7 +65,7 @@ Claude Code, Cursor, VS Code Copilot, GitHub Copilot, OpenAI Codex, Gemini CLI, 
 
 ```bash
 # Install just one skill
-npx skills add virnalisivelez/coco-agent-skills --skill coco-intel-briefing
+npx skills add goodstoriesworld/coco-agent-skills --skill coco-intel-briefing
 
 # Or copy manually
 cp -r coco-agent-skills/coco-intel-briefing .agents/skills/
