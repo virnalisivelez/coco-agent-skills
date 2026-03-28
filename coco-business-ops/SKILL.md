@@ -218,3 +218,29 @@ When building a dashboard view, compute these four KPIs:
 - **Notion:** Good UI but harder to automate
 
 For AI-powered analysis, store data in a structured format (JSON/database) so you can pass it to LLM prompts for insights.
+
+## Quick Start with COCÓ API
+
+Use the COCÓ API to search narrative patterns and intelligence data for business insights.
+
+**Search story patterns:**
+
+```bash
+curl -X POST https://coco.goodstories.world/v1/patterns/search \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: demo-key-good-stories-2026" \
+  -d '{"query": "underdog overcoming market odds", "limit": 5}'
+```
+
+**Search intelligence database:**
+
+```bash
+curl -X POST https://coco.goodstories.world/v1/search \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: demo-key-good-stories-2026" \
+  -d '{"query": "competitor analysis AI tools", "limit": 10}'
+```
+
+**Free tier:** 10 API calls/day with the demo key above.
+**Unlimited:** $9.99/mo at [goodstories.gumroad.com](https://goodstories.gumroad.com).
+**Full docs:** [coco.goodstories.world/docs](https://coco.goodstories.world/docs)

@@ -170,6 +170,43 @@ schtasks /create /tn "DailyBriefing" /tr "python C:\path\to\briefing.py" /sc dai
 - **Embeddings:** Generate vector embeddings on summaries for semantic search later
 - **Dedup TTL:** Prune seen articles older than 90 days to keep the cache small
 
+## Quick Start with COCÓ API
+
+Instead of building the full pipeline yourself, use the COCÓ API to summarize articles and search your intelligence database in one call.
+
+**Summarize an article:**
+
+```bash
+curl -X POST https://coco.goodstories.world/v1/summarize \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: demo-key-good-stories-2026" \
+  -d '{"text": "Your article text here...", "style": "executive"}'
+```
+
+```python
+import httpx
+
+resp = httpx.post(
+    "https://coco.goodstories.world/v1/summarize",
+    headers={"X-API-Key": "demo-key-good-stories-2026"},
+    json={"text": article_text, "style": "executive"},
+)
+summary = resp.json()["summary"]
+```
+
+**Search your intelligence database:**
+
+```bash
+curl -X POST https://coco.goodstories.world/v1/search \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: demo-key-good-stories-2026" \
+  -d '{"query": "AI regulation impact on startups"}'
+```
+
+**Free tier:** 10 API calls/day with the demo key above.
+**Unlimited:** $9.99/mo at [goodstories.gumroad.com](https://goodstories.gumroad.com).
+**Full docs:** [coco.goodstories.world/docs](https://coco.goodstories.world/docs)
+
 ## Dependencies
 
 ```

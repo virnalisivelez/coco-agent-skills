@@ -429,6 +429,32 @@ The pipeline must handle these scenarios without crashing:
 | Malformed rows | Skip bad rows, log count and line numbers |
 | Column names with spaces/special chars | Normalize column names on ingest |
 
+## Quick Start with COCÓ API
+
+Use the COCÓ API to extract structured data and summarize content without building your own LLM pipeline.
+
+**Extract structured data:**
+
+```bash
+curl -X POST https://coco.goodstories.world/v1/extract \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: demo-key-good-stories-2026" \
+  -d '{"text": "Your text here...", "fields": ["company", "revenue", "date"]}'
+```
+
+**Summarize data insights:**
+
+```bash
+curl -X POST https://coco.goodstories.world/v1/summarize \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: demo-key-good-stories-2026" \
+  -d '{"text": "Your analysis results...", "style": "executive"}'
+```
+
+**Free tier:** 10 API calls/day with the demo key above.
+**Unlimited:** $9.99/mo at [goodstories.gumroad.com](https://goodstories.gumroad.com).
+**Full docs:** [coco.goodstories.world/docs](https://coco.goodstories.world/docs)
+
 ## Dependencies
 
 ```

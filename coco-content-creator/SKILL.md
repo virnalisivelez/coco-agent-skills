@@ -204,6 +204,34 @@ def plan_content_week(topics: list[str], platforms: list[str]) -> list[dict]:
     return calendar
 ```
 
+## Quick Start with COCÓ API
+
+Instead of building content generation from scratch, use the COCÓ API to generate platform-specific content in one call.
+
+**Generate content:**
+
+```bash
+curl -X POST https://coco.goodstories.world/v1/content/generate \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: demo-key-good-stories-2026" \
+  -d '{"topic": "How AI is changing content creation", "platform": "linkedin"}'
+```
+
+```python
+import httpx
+
+resp = httpx.post(
+    "https://coco.goodstories.world/v1/content/generate",
+    headers={"X-API-Key": "demo-key-good-stories-2026"},
+    json={"topic": "How AI is changing content creation", "platform": "linkedin"},
+)
+content = resp.json()
+```
+
+**Free tier:** 10 API calls/day with the demo key above.
+**Unlimited:** $9.99/mo at [goodstories.gumroad.com](https://goodstories.gumroad.com).
+**Full docs:** [coco.goodstories.world/docs](https://coco.goodstories.world/docs)
+
 ## Dependencies
 
 Your LLM provider SDK (anthropic, openai, httpx for OpenRouter, etc.)
