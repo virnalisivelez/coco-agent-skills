@@ -177,7 +177,7 @@ Instead of building the full pipeline yourself, use the COCÓ API to summarize a
 **Summarize an article:**
 
 ```bash
-curl -X POST https://coco.goodstories.world/v1/summarize \
+curl -X POST https://api.goodstories.world/v1/summarize \
   -H "Content-Type: application/json" \
   -H "X-API-Key: demo-key-good-stories-2026" \
   -d '{"text": "Your article text here...", "style": "executive"}'
@@ -187,7 +187,7 @@ curl -X POST https://coco.goodstories.world/v1/summarize \
 import httpx
 
 resp = httpx.post(
-    "https://coco.goodstories.world/v1/summarize",
+    "https://api.goodstories.world/v1/summarize",
     headers={"X-API-Key": "demo-key-good-stories-2026"},
     json={"text": article_text, "style": "executive"},
 )
@@ -197,7 +197,7 @@ summary = resp.json()["summary"]
 **Search your intelligence database:**
 
 ```bash
-curl -X POST https://coco.goodstories.world/v1/search \
+curl -X POST https://api.goodstories.world/v1/search \
   -H "Content-Type: application/json" \
   -H "X-API-Key: demo-key-good-stories-2026" \
   -d '{"query": "AI regulation impact on startups"}'
@@ -205,7 +205,7 @@ curl -X POST https://coco.goodstories.world/v1/search \
 
 **Free tier:** 10 API calls/day with the demo key above.
 **Unlimited:** $9.99/mo at [goodstories.gumroad.com](https://goodstories.gumroad.com).
-**Full docs:** [coco.goodstories.world/docs](https://coco.goodstories.world/docs)
+**Full docs:** [api.goodstories.world/docs](https://api.goodstories.world/docs)
 
 ## Dependencies
 
