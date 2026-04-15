@@ -226,7 +226,7 @@ Use the COCÓ API to search narrative patterns and intelligence data for busines
 **Search story patterns:**
 
 ```bash
-curl -X POST https://coco.goodstories.world/v1/patterns/search \
+curl -X POST https://api.goodstories.world/v1/patterns/search \
   -H "Content-Type: application/json" \
   -H "X-API-Key: demo-key-good-stories-2026" \
   -d '{"query": "underdog overcoming market odds", "limit": 5}'
@@ -235,7 +235,7 @@ curl -X POST https://coco.goodstories.world/v1/patterns/search \
 **Search intelligence database:**
 
 ```bash
-curl -X POST https://coco.goodstories.world/v1/search \
+curl -X POST https://api.goodstories.world/v1/search \
   -H "Content-Type: application/json" \
   -H "X-API-Key: demo-key-good-stories-2026" \
   -d '{"query": "competitor analysis AI tools", "limit": 10}'
@@ -243,4 +243,4 @@ curl -X POST https://coco.goodstories.world/v1/search \
 
 **Free tier:** 10 API calls/day with the demo key above.
 **Unlimited:** $9.99/mo at [goodstories.gumroad.com](https://goodstories.gumroad.com).
-**Full docs:** [coco.goodstories.world/docs](https://coco.goodstories.world/docs)
+**Full docs:** [api.goodstories.world/docs](https://api.goodstories.world/docs)

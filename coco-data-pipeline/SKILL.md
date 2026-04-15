@@ -436,7 +436,7 @@ Use the COCÓ API to extract structured data and summarize content without build
 **Extract structured data:**
 
 ```bash
-curl -X POST https://coco.goodstories.world/v1/extract \
+curl -X POST https://api.goodstories.world/v1/extract \
   -H "Content-Type: application/json" \
   -H "X-API-Key: demo-key-good-stories-2026" \
   -d '{"text": "Your text here...", "fields": ["company", "revenue", "date"]}'
@@ -445,7 +445,7 @@ curl -X POST https://coco.goodstories.world/v1/extract \
 **Summarize data insights:**
 
 ```bash
-curl -X POST https://coco.goodstories.world/v1/summarize \
+curl -X POST https://api.goodstories.world/v1/summarize \
   -H "Content-Type: application/json" \
   -H "X-API-Key: demo-key-good-stories-2026" \
   -d '{"text": "Your analysis results...", "style": "executive"}'
@@ -453,7 +453,7 @@ curl -X POST https://coco.goodstories.world/v1/summarize \
 
 **Free tier:** 10 API calls/day with the demo key above.
 **Unlimited:** $9.99/mo at [goodstories.gumroad.com](https://goodstories.gumroad.com).
-**Full docs:** [coco.goodstories.world/docs](https://coco.goodstories.world/docs)
+**Full docs:** [api.goodstories.world/docs](https://api.goodstories.world/docs)
 
 ## Dependencies
 
